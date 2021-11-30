@@ -1,8 +1,0 @@
-{"plugins":{
-    "antivirus" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/AntiVirus.ps1",
-    "bypass_defender":"https://raw.githubusercontent.com/UQABXO/DARK-X/main/BypassDefender.ps1",
-    "bypassed_defender":"https://raw.githubusercontent.com/UQABXO/DARK-X/main/BypassedDefender.ps1",
-    "scheduled":"https://raw.githubusercontent.com/UQABXO/DARK-X/main/Scheduled.ps1",
-    "stealer":"https://raw.githubusercontent.com/UQABXO/DARK-X/main/Stealer.py"
-    }
-}
