@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 from zipfile import ZipFile
 import requests
 import os
