@@ -4,7 +4,7 @@ import os
 import sys
 import getpass
 from subprocess import Popen
-import win32com.shell.shell as 
+import win32com.shell.shell as  shell
 mitmf = ""
 class MITMProxy():
 	def __init__(self):
